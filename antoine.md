@@ -1,3 +1,27 @@
+# BaseFITS [![Build Status](https://github.com/emmt/BaseFITS.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/emmt/BaseFITS.jl/actions/workflows/CI.yml?query=branch%3Amain) [![Build Status](https://ci.appveyor.com/api/projects/status/github/emmt/BaseFITS.jl?svg=true)](https://ci.appveyor.com/project/emmt/BaseFITS-jl) [![Coverage](https://codecov.io/gh/emmt/BaseFITS.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/emmt/BaseFITS.jl)
+
+`BaseFITS` is a pure [Julia](https://julialang.org/) package for managing basic
+FITS structures such as FITS headers. [FITS (for *Flexible Image Transport
+System*)](https://fits.gsfc.nasa.gov/fits_standard.html) is a data file format
+widely used in astronomy. A FITS file is a concatenation of *Header Data Units*
+(HDUs) that consist in a header part and a data part. The header of a HDU is a
+collection of so-called *FITS cards*. Each such card is stored in textual form
+and associates a keyword with a value and/or a comment.
+
+The `BaseFITS` package is intended to provide:
+
+- Methods for fast parsing of a FITS header or of a piece of a FITS header that
+  is a single FITS header card.
+
+- An expressive API for creating FITS cards and accessing their components
+  (keyword, value, and comment), possibly, in a *type-stable* way.
+
+- Methods for easy access the records of a FITS header.
+
+```julia
+
+```
+
 ### keyword CONTINUE
 
 FITS specification proposes to store a long string with the help of the `CONTINUE` keyword. Example:
